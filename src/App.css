@@ -1,32 +1,126 @@
 .App {
-    display: flex;
-    justify-content: space-between; /* Espaça os elementos igualmente */
-    height: 100vh; /* Ocupa toda a altura da tela */
-  }
-  
-  .CarouselWrapper {
-    flex: 1; /* Ocupa o espaço disponível */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .carousel {
-    width: 80%; /* Ajuste conforme necessário */
-    height: 100%;
-  }
-  
-  .Infos {
-    width: 40%;
-    font-size: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: whitesmoke;
-    font-family: "Red Hat Text", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-    color: lightslategrey;
-  }
+  display: flex;
+  height: 100vh;
+  margin: 0; /* Remove qualquer margem padrão que possa afetar o layout */
+}
+
+.carousel {
+  width: 60%;
+  /* Outros estilos para o carousel */
+}
+a.App {
+  display: flex;
+  height: 100vh;
+  margin: 0; /* Remove qualquer margem padrão que possa afetar o layout */
+}
+
+.carousel {
+  width: 60%;
+  /* Outros estilos para o carousel */
+}
+
+.Infos {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha os itens verticalmente ao topo */
+  text-align: right; /* Alinha o texto à direita dentro da .Infos */
+  background-color: whitesmoke;
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(27, 70, 72);
+  padding: 20px; /* Adiciona padding se necessário */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+  height: 100vh; /* Garante que .Infos ocupe toda a altura da viewport */
+  overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo for maior que a altura */
+}
+
+.Infos-title {
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-bottom: 20px; /* Espaço entre o título e o corpo */
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: rgb(27, 70, 72);
+  background-color: whitesmoke;
+}
+
+.Infos-body {
+  font-size: 18px; /* Ajuste conforme necessário */
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(27, 70, 72);
+  margin-bottom: 20px; /* Espaço entre o corpo e o componente customizado */
+  background-color: whitesmoke;
+  text-align: justify; /* Justifica o texto */
+  text-align-last: right; /* Alinha a última linha à direita */
+  direction: ltr; /* Define a direção do texto da esquerda para a direita */
+}
+
+.fab {
+  font-size: 40px; /* Tamanho do ícone */
+  color: rgb(27, 70, 72); /* Cor do ícone */
+  margin: 10px; /* Espaço ao redor do ícone */
+}
+
+.Infos {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha os itens verticalmente ao topo */
+  text-align: center;
+  background-color: whitesmoke;
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(27, 70, 72);
+  padding: 20px; /* Adiciona padding se necessário */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+  height: 100vh; /* Garante que .Infos ocupe toda a altura da viewport */
+  overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo for maior que a altura */
+}
+
+.Infos-title {
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-bottom: 20px; /* Espaço entre o título e o corpo */
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: rgb(27, 70, 72);
+  background-color: whitesmoke;
+}
+
+.Infos-body {
+  font-size: 15px; /* Ajuste conforme necessário */
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(27, 70, 72);
+  margin-bottom: 20px; /* Espaço entre o corpo e o componente customizado */
+  background-color: whitesmoke;
+  text-align: justify; /* Justifica o texto */
+  text-align-last: center; /* Alinha a última linha à direita */ 
+  line-height: 1.5; /* Ajusta a altura da linha para melhor legibilidade */
+}
+
+.fab {
+  font-size: 40px; /* Tamanho do ícone */
+  color: rgb(27, 70, 72); /* Cor do ícone */
+  margin: 0; /* Remove margens para garantir que o link envolva exatamente o ícone */
+  vertical-align: middle; /* Alinha verticalmente com outros elementos, se houver */
+}
+
+a.fab-container {
+  display: inline-block; /* Garante que o link envolva apenas o tamanho do conteúdo */
+  padding: 0; /* Remove padding adicional */
+  border: none; /* Remove qualquer borda padrão */
+  width: 40px;
+}
