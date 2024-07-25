@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import leftArrow from "/src/components/images/arrow.svg";
 import rightArrow from "/src/components/images/arrow.svg";
-
 import "./carousel.css";
 
 export const Carousel = ({ data }) => {
   const [slide, setSlide] = useState(0);
 
   const nextSlide = () => {
-    setSlide(slide === data.length - 1 ? 0 : slide + 1);
+    setSlide((prevSlide) =>
+      prevSlide === data.length - 1 ? 0 : prevSlide + 1
+    );
   };
 
   const prevSlide = () => {
-    setSlide(slide === 0 ? data.length - 1 : slide - 1);
+    setSlide((prevSlide) =>
+      prevSlide === 0 ? data.length - 1 : prevSlide - 1
+    );
   };
 
   return (
@@ -21,36 +24,30 @@ export const Carousel = ({ data }) => {
         src={leftArrow}
         alt="Previous Slide"
         onClick={prevSlide}
-        className="nav-next"
+        className="nav-previous arrow"
       />
-      {data.map((item, idx) => {
-        return (
-          <img
-            src={item.src}
-            alt={item.alt}
-            key={idx}
-            className={slide === idx ? "slide" : "slide slide-hidden"}
-          />
-        );
-      })}
+      {data.map((item, idx) => (
+        <img
+          src={item.src}
+          alt={item.alt}
+          key={idx}
+          className={`slide ${slide === idx ? "slide-active" : ""}`}
+        />
+      ))}
       <img
         src={rightArrow}
         alt="Next Slide"
         onClick={nextSlide}
-        className="nav-previous"
+        className="nav-next arrow"
       />
       <span className="indicators">
-        {data.map((_, idx) => {
-          return (
-            <button
-              key={idx}
-              className={
-                slide === idx ? "indicator" : "indicator indicator-inactive"
-              }
-              onClick={() => setSlide(idx)}
-            ></button>
-          );
-        })}
+        {data.map((_, idx) => (
+          <button
+            key={idx}
+            className={`indicator ${slide === idx ? "" : "indicator-inactive"}`}
+            onClick={() => setSlide(idx)}
+          ></button>
+        ))}
       </span>
     </div>
   );

@@ -124,3 +124,15 @@ a.fab-container {
   border: none; /* Remove qualquer borda padrão */
   width: 40px;
 }
+
+.carousel img {
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+.carousel-item.inactive {
+  opacity: 0;
+}
