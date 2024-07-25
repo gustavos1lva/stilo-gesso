@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
-    height: 400px;
+    width: 60%;
+    height: 100%;
   }
   
   .slide {
@@ -17,27 +17,33 @@
   .slide-hidden {
     display: none;
   }
-  
-  .arrow {
+
+  .nav-next,
+  .nav-previous {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     position: absolute;
-    filter: drop-shadow(0px 0px 5px #555);
-    width: 2rem;
-    height: 2rem;
-    color: white;
-  }
-  
-  .arrow:hover {
+    top: 50%;
+    width: 6em;
+    height: 6em;
+    margin-top: -3em;
+    background-image: url("images/arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     cursor: pointer;
   }
-  
-  .arrow-left {
-    left: 1rem;
+
+  .nav-previous {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+    left: 0;
   }
-  
-  .arrow-right {
-    right: 1rem;
+
+  .nav-next {
+    right: 0;
   }
-  
   .indicators {
     display: flex;
     position: absolute;
@@ -46,8 +52,8 @@
   
   .indicator {
     background-color: white;
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 0;
+    width: 0;
     border-radius: 100%;
     border: none;
     outline: none;
@@ -58,4 +64,20 @@
   
   .indicator-inactive {
     background-color: grey;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 2rem; /* Ajuste conforme necessário */
+    height: 2rem; /* Ajuste conforme necessário */
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 5px #555);
+  }
+  
+  .arrow-left {
+    left: 1rem;
+  }
+  
+  .arrow-right {
+    right: 1rem;
   }

@@ -1,7 +1,32 @@
 .App {
-    height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; /* Espaça os elementos igualmente */
+    height: 100vh; /* Ocupa toda a altura da tela */
+  }
+  
+  .CarouselWrapper {
+    flex: 1; /* Ocupa o espaço disponível */
+    display: flex;
     justify-content: center;
     align-items: center;
+  }
+  
+  .carousel {
+    width: 80%; /* Ajuste conforme necessário */
+    height: 100%;
+  }
+  
+  .Infos {
+    width: 40%;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: whitesmoke;
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    color: lightslategrey;
   }

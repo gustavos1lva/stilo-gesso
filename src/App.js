@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Carousel data={slides} />
+      <div className="Infos">Stilo Gesso</div>
     </div>
   );
 }
