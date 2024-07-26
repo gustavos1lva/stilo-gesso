@@ -19,49 +19,6 @@ a.App {
   /* Outros estilos para o carousel */
 }
 
-.Infos {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Alinha os itens verticalmente ao topo */
-  text-align: right; /* Alinha o texto à direita dentro da .Infos */
-  background-color: whitesmoke;
-  font-family: "Red Hat Text", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-  color: rgb(27, 70, 72);
-  padding: 20px; /* Adiciona padding se necessário */
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
-  height: 100vh; /* Garante que .Infos ocupe toda a altura da viewport */
-  overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo for maior que a altura */
-}
-
-.Infos-title {
-  font-size: 2.25em;
-  font-weight: 700;
-  margin-bottom: 20px; /* Espaço entre o título e o corpo */
-  font-family: "Red Hat Text", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  color: rgb(27, 70, 72);
-  background-color: whitesmoke;
-}
-
-.Infos-body {
-  font-size: 18px; /* Ajuste conforme necessário */
-  font-family: "Red Hat Text", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-  color: rgb(27, 70, 72);
-  margin-bottom: 20px; /* Espaço entre o corpo e o componente customizado */
-  background-color: whitesmoke;
-  text-align: justify; /* Justifica o texto */
-  text-align-last: right; /* Alinha a última linha à direita */
-  direction: ltr; /* Define a direção do texto da esquerda para a direita */
-}
-
 .fab {
   font-size: 40px; /* Tamanho do ícone */
   color: rgb(27, 70, 72); /* Cor do ícone */
@@ -93,8 +50,10 @@ a.App {
   font-family: "Red Hat Text", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: rgb(27, 70, 72);
+  color: #0b483f;
   background-color: whitesmoke;
+  position: relative;
+  text-align: center;
 }
 
 .Infos-body {
@@ -111,19 +70,55 @@ a.App {
   line-height: 1.5; /* Ajusta a altura da linha para melhor legibilidade */
 }
 
-.fab {
-  font-size: 40px; /* Tamanho do ícone */
-  color: rgb(27, 70, 72); /* Cor do ícone */
-  margin: 0; /* Remove margens para garantir que o link envolva exatamente o ícone */
-  vertical-align: middle; /* Alinha verticalmente com outros elementos, se houver */
+.fab-container {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  width: 250px;
+  background-color: whitesmoke;
+  text-align: right;
 }
 
-a.fab-container {
-  display: inline-block; /* Garante que o link envolva apenas o tamanho do conteúdo */
-  padding: 0; /* Remove padding adicional */
-  border: none; /* Remove qualquer borda padrão */
-  width: 40px;
+.fab-container2 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  width: 380px;
+  background-color: whitesmoke;
+  text-align: right;
 }
+
+.fab-container2 .fa{
+  font-size: 35px;
+  color: #0e937f;
+  margin: 0;
+}
+.fab-container2 .email {
+  font-size: 25px; /* Ajuste o tamanho conforme necessário */
+  color: #0f695b; /* Mantém a cor do ícone */
+  margin-left: 5px; /* Ajuste a margem conforme necessário */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.fab-container .fab{
+  font-size: 40px;
+  color: #0e937f;
+  margin: 0;
+}
+
+.fab-container .numero {
+  font-size: 25px; /* Ajuste o tamanho conforme necessário */
+  color: #0f695b; /* Mantém a cor do ícone */
+  margin-left: 5px; /* Ajuste a margem conforme necessário */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
 .carousel img {
   object-fit: cover;
@@ -135,4 +130,37 @@ a.fab-container {
 }
 .carousel-item.inactive {
   opacity: 0;
+}
+
+.orcamento {
+  width: 100%;
+  padding: 10px;
+  background-color: #0e937f;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.servicos {
+  width: 100%;
+  padding: 10px;
+  background-color: #0e937f;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sobre {
+  width: 100%;
+  padding: 10px;
+  background-color: #0e937f;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }

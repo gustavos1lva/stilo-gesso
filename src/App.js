@@ -18,7 +18,7 @@ function App() {
       <Carousel data={slides} />
       <div className="Infos">
         <h1 className="Infos-title">Stilo Gesso</h1>
-        <p className="Infos-body">
+        {/* <p className="Infos-body">
           <br></br>
           <br></br>
           Com mais de 19 anos de experiência, a Stilo Gesso é especializada em
@@ -35,15 +35,48 @@ function App() {
           <br></br>
           Entre em contato e descubra como a Stilo Gesso pode fazer a diferença
           no seu projeto.
-        </p>
-        <a>
+        </p> */}
+        <button type="button" className="sobre">
+          <i class="fas fa-address-card" style={{ marginRight: "10px" }}></i>
+          Sobre
+        </button>
+        <br></br>
+        <button type="button" className="servicos">
+          <i class="fas fa-tools" style={{ marginRight: "10px" }}></i>
+          Serviços
+        </button>
+        <br></br>
+        <button type="button" className="orcamento">
+          <i class="fas fa-file-signature" style={{ marginRight: "10px" }}></i>
+          Orçamento
+        </button>
+        <br></br>
+        <a style={{ textAlign: "right" }}>
           <a
             href="https://wa.me/5511986514791"
             target="_blank"
             rel="noopener noreferrer"
-            className="fab-container"
+            class="fab-container"
           >
-            <i className="fab fa-whatsapp"></i>
+            <span class="numero">11 98651-4791</span>
+            <i
+              class="fab fa-whatsapp"
+              style={{ marginLeft: "10px", textDecoration: "none" }}
+            ></i>
+          </a>
+          <br></br>
+          <br></br>
+          <a
+            href="https://wa.me/5511986514791"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="fab-container2"
+          >
+            <span class="email">stilogesso@gmail.com</span>
+            <i
+              class="fa fa-envelope"
+              style={{ marginLeft: "10px", textDecoration: "none" }}
+            ></i>
           </a>
         </a>
       </div>
