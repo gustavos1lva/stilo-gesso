@@ -9,7 +9,7 @@ function importAll(r) {
 }
 
 const images = importAll(
-  require.context("../data", false, /\.(jpg|jpeg|png)$/)
+  require.context("../data", false, /\.(jpg|jpeg|png|heic)$/)
 );
 
 export default images;

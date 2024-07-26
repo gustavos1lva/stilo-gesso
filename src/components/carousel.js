@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import leftArrow from "/src/components/images/arrow.svg";
 import rightArrow from "/src/components/images/arrow.svg";
 import "./carousel.css";
@@ -17,6 +17,13 @@ export const Carousel = ({ data }) => {
       prevSlide === 0 ? data.length - 1 : prevSlide - 1
     );
   };
+
+  useEffect(() => {
+    // Define um intervalo para mudar o slide automaticamente a cada 3 segundos
+    const interval = setInterval(nextSlide, 4000);
+    // Limpa o intervalo quando o componente for desmontado
+    return () => clearInterval(interval);
+  }, [data.length]);
 
   return (
     <div className="carousel">

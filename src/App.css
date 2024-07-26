@@ -1,22 +1,12 @@
 .App {
   display: flex;
   height: 100vh;
-  margin: 0; /* Remove qualquer margem padrão que possa afetar o layout */
+  margin: 0;
+  align-items: center;
 }
 
 .carousel {
   width: 60%;
-}
-a.App {
-  display: flex;
-  height: 100vh;
-  margin: 0;
-}
-
-.fab {
-  font-size: 40px; /* Tamanho do ícone */
-  color: rgb(27, 70, 72); /* Cor do ícone */
-  margin: 10px; /* Espaço ao redor do ícone */
 }
 
 .Infos {
@@ -25,7 +15,7 @@ a.App {
   flex-direction: column;
   justify-content: flex-start; /* Alinha os itens verticalmente ao topo */
   text-align: center;
-  background-color: whitesmoke;
+  background-color: white;
   font-family: "Red Hat Text", sans-serif;
   font-optical-sizing: auto;
   font-weight: normal;
@@ -42,7 +32,7 @@ a.App {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: whitesmoke;
+  background-color: white;
   padding: 20px;
   box-sizing: border-box;
   height: 100vh;
@@ -67,7 +57,7 @@ a.App {
   font-optical-sizing: auto;
   font-style: normal;
   color: #0b483f;
-  background-color: whitesmoke;
+  background-color: white;
   position: relative;
   text-align: center;
 }
@@ -80,7 +70,7 @@ a.App {
   font-style: normal;
   color: rgb(27, 70, 72);
   margin-bottom: 20px; /* Espaço entre o corpo e o componente customizado */
-  background-color: whitesmoke;
+  background-color: white;
   text-align: justify; /* Justifica o texto */
   text-align-last: center; /* Alinha a última linha à direita */ 
   line-height: 1.5; /* Ajusta a altura da linha para melhor legibilidade */
@@ -91,7 +81,7 @@ a.App {
   padding: 0;
   border: none;
   width: 250px;
-  background-color: whitesmoke;
+  background-color: white;
   text-align: right;
 }
 
@@ -100,34 +90,34 @@ a.App {
   padding: 0;
   border: none;
   width: 380px;
-  background-color: whitesmoke;
+  background-color: white;
   text-align: right;
 }
 
 .fab-container2 .fa{
-  font-size: 35px;
+  font-size: 25px;
   color: #0e937f;
   margin: 0;
 }
 .fab-container2 .email {
-  font-size: 25px; /* Ajuste o tamanho conforme necessário */
-  color: #0f695b; /* Mantém a cor do ícone */
-  margin-left: 5px; /* Ajuste a margem conforme necessário */
-  font-weight: bold;
+  font-size: 20px;
+  color: #0f695b;
+  margin-left: 5px;
+  font-weight: normal;
   text-decoration: none;
 }
 
 .fab-container .fab{
-  font-size: 40px;
+  font-size: 25px;
   color: #0e937f;
   margin: 0;
 }
 
 .fab-container .numero {
-  font-size: 25px; /* Ajuste o tamanho conforme necessário */
+  font-size: 20px; /* Ajuste o tamanho conforme necessário */
   color: #0f695b; /* Mantém a cor do ícone */
   margin-left: 5px; /* Ajuste a margem conforme necessário */
-  font-weight: bold;
+  font-weight: normal;
   text-decoration: none;
 }
 
@@ -159,7 +149,11 @@ a:active { text-decoration: none; }
   font-size: 16px;
 }
 
-.servicos {
+.button-container {
+  margin-bottom: 20px; /* Ajuste conforme necessário */
+}
+
+.sobre, .servicos {
   width: 100%;
   padding: 10px;
   background-color: #0e937f;
@@ -168,15 +162,41 @@ a:active { text-decoration: none; }
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  display: block; /* Garante que o botão ocupe a largura disponível */
 }
 
 .sobre {
-  width: 100%;
-  padding: 10px;
-  background-color: #0e937f;
-  border: none;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
+  margin-bottom: 10px; /* Ajuste o espaçamento inferior */
+}
+
+.orc {
+  font-size: 18px;
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  color: rgb(41, 41, 189); 
+  margin-bottom: 20px;
+  background-color: white;
+  text-align: justify;
+  text-align-last: center;
+  line-height: 1.5;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-bottom: 20px; /* Espaço abaixo do logo */
+}
+
+.logo {
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+  width: 200px; /* Ajuste o tamanho conforme necessário */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinha itens à direita */
 }
