@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/",
+    publicPath: "/", // Certifique-se de que publicPath está configurado corretamente
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -46,5 +46,6 @@ module.exports = {
     hot: true,
     open: true,
     watchFiles: ["public/**/*"],
+    historyApiFallback: true, // Adicione esta linha para redirecionar todas as requisições para index.html
   },
 };

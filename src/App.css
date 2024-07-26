@@ -6,17 +6,11 @@
 
 .carousel {
   width: 60%;
-  /* Outros estilos para o carousel */
 }
 a.App {
   display: flex;
   height: 100vh;
-  margin: 0; /* Remove qualquer margem padrão que possa afetar o layout */
-}
-
-.carousel {
-  width: 60%;
-  /* Outros estilos para o carousel */
+  margin: 0;
 }
 
 .fab {
@@ -37,10 +31,32 @@ a.App {
   font-weight: normal;
   font-style: normal;
   color: rgb(27, 70, 72);
-  padding: 20px; /* Adiciona padding se necessário */
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
-  height: 100vh; /* Garante que .Infos ocupe toda a altura da viewport */
-  overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo for maior que a altura */
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.Content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: whitesmoke;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: auto;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .Infos-title {
