@@ -65,7 +65,7 @@ function App() {
                     rel="noopener noreferrer"
                     className="fab-container2"
                   >
-                    <span className="email">stilogesso@gmail.com</span>
+                    <span className="email">stilogesso1@gmail.com</span>
                     <i
                       className="fa fa-envelope"
                       style={{ marginLeft: "10px", textDecoration: "none" }}
